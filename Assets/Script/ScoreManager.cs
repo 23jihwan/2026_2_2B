@@ -43,6 +43,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt(key, best);
             PlayerPrefs.Save();
             newBestText.SetActive(true);      // 추가
+            ScoreSaver.Instance.Save(best);
         }
         scoreText.text = "SCORE " + score;
         bestText.text = "BEST " + best;
